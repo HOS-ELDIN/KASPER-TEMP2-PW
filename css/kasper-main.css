@@ -1,0 +1,258 @@
+/* start variables */
+:root{
+  --w-text-color: #ffffff;
+  --b-body-color:#1f2021;
+  --blue-color:#00c7fc;
+  --header-glow-bot-pos:-4px;
+  --header-glow-height:3px
+}
+/* end variables */
+
+/* start global rules */
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--b-body-color);
+}
+
+ul {
+  list-style: none;
+}
+
+
+/* end global rules */
+
+/* start component */
+/* end component */
+
+/* start header */
+header {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header .container::after {
+  content: "";
+  width: calc(100% - 30px );
+  background-color: #726f71;
+  position: absolute;
+  height: var(--header-glow-height);
+  bottom: var(--header-glow-bot-pos);
+  left: 15px;
+  z-index: -1;
+}
+
+header .container .logo::after {
+  content: "";
+  width: calc(100% - 30px );
+  height: var(--header-glow-height);
+  background-color: var(--blue-color);
+  position: absolute;
+  bottom: var(--header-glow-bot-pos);
+  left: 15px;
+  display: none;
+  z-index: 1;
+}
+
+header .container .logo:hover::after {
+  display: block;
+}
+
+header .container nav {
+  display: flex;
+  align-items: center;
+}
+header .container .toggle {
+  font-size: 22px;
+  color: var(--w-text-color) ;
+  display: none;
+  padding:15px;
+}
+
+header .container .toggle:hover {
+  color: var(--blue-color);
+}
+
+
+
+header .container nav ul {
+  display: inline-block;
+}
+
+@media (max-width: 992px) {
+  header .container .toggle {
+    display: inline-block;
+  }
+  header .container nav ul {
+    display: none;
+  }
+  header .container nav ul:hover {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right:0;
+    width: 30%;
+    background-color: rgb(0 0 0 / 50%)
+  }
+  header .container .toggle:hover + ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right:0;
+    width: 30%;
+    background-color: rgb(0 0 0 / 50%)
+  }
+
+  header .container .toggle::after {
+    content: "";
+    width: 55px;
+    height: 34px;
+    background-color: transparent;
+    position: absolute;
+    top: 40px;
+    right: 65px;
+  }
+
+}
+
+header .container ul li {
+  display: inline-block;
+  position: relative;
+
+}
+header .container ul li a{
+  margin-right: 20px;
+  padding: 20px 5px;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--w-text-color);
+  font-size: 15px;
+
+}
+/* remove the e */
+header .container ul li a.activee,
+header .container ul li a:hover{
+  border-bottom: 3px solid var(--blue-color);
+  color: var(--blue-color);
+
+}
+
+@media (max-width: 992px) {
+
+
+  header .container ul li a{
+    display: block;
+    padding: 20px 5px;
+    margin: 0;
+}
+}
+
+
+/* styling the search icon */
+header .container ul+a {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 20px 15px ;
+  color: var(--w-text-color);
+  position: relative;
+  /* font-size: 20px; */
+}
+
+header .container ul+a:hover {
+  color: var(--blue-color);
+  /* border-bottom: 3px solid var(--blue-color); */
+}
+
+header .container ul+a::before {
+  content: "";
+  width: 2px;
+  height: 30px;
+  background-color: #dad6d7;
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+header .container ul+a:hover::before{
+  background-color: var(--blue-color);
+}
+
+header .container ul+a::after {
+  content: "";
+  width: 100%;
+  height: var(--header-glow-height);
+  background-color: var(--blue-color);
+  position: absolute;
+  bottom: var(--header-glow-bot-pos);
+  left: 0;
+  display: none;
+  z-index: 1;
+
+}
+
+header .container ul+a:hover::after {
+  display: block;
+}
+
+
+
+/* end header */
+
+/* start landing section  */
+.landing {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.landing ::before {
+  content: "";
+  background-image: url(../images/landing.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: ;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.66;
+  z-index: -1;
+}
+
+.landing .container {
+color: #ffffff;
+}
+
+
+
+/* end landing section  */
+
+/* strat features */
+/* end features */
+
+/* start of services */
+/* end of services */
+
+/* start of portfolio */
+/* end of portfolio */
+
+/* start of about */
+/* end of about */
+
+/* start of contact */
+/* end of contact */
+
+/* footer start */
+/* footer end */
