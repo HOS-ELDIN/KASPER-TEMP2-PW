@@ -1,0 +1,86 @@
+/* start global rules */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Mobile */
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
+  br {
+    display: none;
+  }
+}
+/*Small Screens */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+  br {
+    display: none;
+  }
+}
+/* Medium Screens */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+  br {
+    display: inline;
+  }
+}
+/* Large Screens */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* end global rules */
+
+
+/* start variables */
+/* end variables */
+
+/* start global rules */
+body {
+  font-family: "Work Sans", sans-serif;
+}
+/* end global rules */
+
+/* start component */
+/* end component */
+
+/* start header */
+/* end header */
+
+/* start landing section  */
+/* end landing section  */
+
+/* strat features */
+/* end features */
+
+/* start of services */
+/* end of services */
+
+/* start of portfolio */
+/* end of portfolio */
+
+/* start of about */
+/* end of about */
+
+/* start of contact */
+/* end of contact */
+
+/* footer start */
+/* footer end */
