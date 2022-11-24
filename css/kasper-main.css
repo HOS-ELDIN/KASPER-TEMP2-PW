@@ -193,6 +193,7 @@ header .container ul + a:hover::after {
   background-image: url(../images/landing.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: bottom;
   position: absolute;
   top: 0px;
   right: 0px;
