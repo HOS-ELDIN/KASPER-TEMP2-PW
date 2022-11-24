@@ -177,18 +177,13 @@ header .container ul + a:hover::after {
 /* start landing section  */
 .landing {
   min-height: 100vh;
-  display: flex;
-  justify-content: left;
-  align-items: center;
   position: relative;
 }
-
 .landing::before {
   content: "";
   background-image: url(../images/landing.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  /* background-position: bottom; */
   position: absolute;
   top: 0px;
   right: 0px;
@@ -197,78 +192,50 @@ header .container ul + a:hover::after {
   opacity: 0.6;
   z-index: -1;
 }
-
-.landing .container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  justify-content: center;
-}
-
-.landing .container .landing-content {
+.landing .landing-content {
   position: absolute;
   left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: right;
-  align-items: flex-start;
+  top: 50%;
+  transform: translateY(-50%);
   width: 50vw;
   color: var(--w-text-color);
   background-color: var(--transparent-color);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
 }
-
-
-.landing .container .landing-content .landing-text {
+.landing .landing-content .landing-text {
   padding: 20px 20px 20px 15%;
 }
-
-
-
-/* .landing .container .landing-content::after {
-  content: "";
-  background-color: var(--transparent-color);
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-} */
-
-.landing .container .landing-content h2 {
+.landing .landing-content h2 {
   text-transform: capitalize;
   font-weight: 400;
   font-size: 2.86vw;
   margin: 20px 0;
-  /* padding-left: 10px; */
-  line-height: 1.8;
+  line-height: 1.6;
 }
-
-.landing .container .landing-content p {
-  /* padding-left: 10px; */
-  /* margin: 0 0 25px 0; */
+.landing .landing-content p {
   line-height: 1.8;
   font-weight: 300;
   font-size: 1.4vw;
 }
-
 @media (max-width: 767px) {
-  .landing .container .landing-content .landing-text {
+  .landing .landing-content .landing-text {
     padding: 30px;
   }
-  .landing .container .landing-content {
+  .landing .landing-content {
     width: auto;
     max-width: 100%;
   }
-  .landing .container .landing-content h2 {
+  .landing .landing-content h2 {
     font-size: 5vw;
   }
-  .landing .container .landing-content p {
+  .landing .landing-content p {
     font-size: 3.3vw;
   }
 }
-
-.landing .container .change-background {
+.landing .change-background {
   color: var(--w-text-color);
   font-size: 20px;
   position: absolute;
@@ -279,23 +246,18 @@ header .container ul + a:hover::after {
   -ms-transform:translateY(-50%) ;
   -o-transform:translateY(-50%) ;
 }
-
-.landing .container .change-background.right {
+.landing .change-background.right {
   right: 20px;
 }
-
-.landing .container .change-background.left {
+.landing .change-background.left {
   left: 20px;
 }
-
 @media (max-width: 767px) {
-  .landing .container .change-background {
+  .landing .change-background {
     display: none;
   }
 }
-
-
-.landing .container .dots-content {
+.landing .dots-content {
   position: absolute;
   bottom: 30px;
   right: 50%;
@@ -305,8 +267,7 @@ header .container ul + a:hover::after {
   -ms-transform: translateX(50%);
   -o-transform: translateX(50%);
 }
-
-.landing .container .dots-content .dot {
+.landing .dots-content .dot {
   display: inline-block;
   margin: 2px;
   border: 1px solid var(--w-text-color);
@@ -318,12 +279,14 @@ header .container ul + a:hover::after {
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
 }
-
-.landing .container .dots-content .dot:nth-child(2) {
+.landing .dots-content .dot:hover {
   background-color: var(--blue-color);
   border-color: var(--blue-color);
 }
-
+.landing .dots-content .dot:nth-child(2) {
+  background-color: var(--blue-color);
+  border-color: var(--blue-color);
+}
 /* end landing section  */
 
 /* strat features */
