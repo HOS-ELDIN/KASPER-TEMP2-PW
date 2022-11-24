@@ -1,10 +1,10 @@
 /* start variables */
-:root{
+:root {
   --w-text-color: #ffffff;
-  --b-body-color:#1f2021;
-  --blue-color:#00c7fc;
-  --header-glow-bot-pos:-4px;
-  --header-glow-height:3px
+  --b-body-color: #1f2021;
+  --blue-color: #00c7fc;
+  --header-glow-bot-pos: -11px;
+  --header-glow-height: 1px;
 }
 /* end variables */
 
@@ -13,12 +13,9 @@ body {
   font-family: "Open Sans", sans-serif;
   background-color: var(--b-body-color);
 }
-
 ul {
   list-style: none;
 }
-
-
 /* end global rules */
 
 /* start component */
@@ -29,18 +26,20 @@ header {
   width: 100%;
   position: absolute;
   z-index: 2;
+  min-width: none;
+  height: 75px;
+  display: flex;
+  align-items: center;
 }
-
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
 }
-
 header .container::after {
   content: "";
-  width: calc(100% - 30px );
+  width: calc(100% - 30px);
   background-color: #726f71;
   position: absolute;
   height: var(--header-glow-height);
@@ -48,10 +47,9 @@ header .container::after {
   left: 15px;
   z-index: -1;
 }
-
 header .container .logo::after {
   content: "";
-  width: calc(100% - 30px );
+  width: calc(100% - 30px);
   height: var(--header-glow-height);
   background-color: var(--blue-color);
   position: absolute;
@@ -60,33 +58,27 @@ header .container .logo::after {
   display: none;
   z-index: 1;
 }
-
 header .container .logo:hover::after {
   display: block;
 }
-
 header .container nav {
   display: flex;
   align-items: center;
 }
 header .container .toggle {
   font-size: 22px;
-  color: var(--w-text-color) ;
+  font-weight: 600;
+  color: var(--w-text-color);
   display: none;
-  padding:15px;
+  padding: 15px;
 }
-
 header .container .toggle:hover {
   color: var(--blue-color);
 }
-
-
-
 header .container nav ul {
   display: inline-block;
 }
-
-@media (max-width: 992px) {
+@media (max-width: 767px) {
   header .container .toggle {
     display: inline-block;
   }
@@ -97,83 +89,70 @@ header .container nav ul {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 100%;
-    right:0;
-    width: 30%;
-    background-color: rgb(0 0 0 / 50%)
+    top: 120%;
+    right: 0;
+    width: 35%;
+    background-color: rgb(0 0 0 / 50%);
   }
   header .container .toggle:hover + ul {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 100%;
-    right:0;
-    width: 30%;
-    background-color: rgb(0 0 0 / 50%)
+    top: 120%;
+    right: 0;
+    width: 35%;
+    background-color: rgb(0 0 0 / 50%);
   }
-
   header .container .toggle::after {
     content: "";
-    width: 55px;
-    height: 34px;
+    width: 60px;
+    height: 40px;
     background-color: transparent;
+    /* background-color: red; */
     position: absolute;
     top: 40px;
     right: 65px;
   }
-
 }
-
 header .container ul li {
   display: inline-block;
   position: relative;
-
 }
-header .container ul li a{
-  margin-right: 20px;
-  padding: 20px 5px;
+header .container ul li a {
+  padding: 30px 6px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
   text-transform: uppercase;
   color: var(--w-text-color);
-  font-size: 15px;
-
+  font-size: 14px;
 }
 /* remove the e */
 header .container ul li a.activee,
-header .container ul li a:hover{
-  border-bottom: 3px solid var(--blue-color);
+header .container ul li a:hover {
+  border-bottom: 1px solid var(--blue-color);
   color: var(--blue-color);
-
 }
-
-@media (max-width: 992px) {
-
-
-  header .container ul li a{
+@media (max-width: 767px) {
+  header .container ul li a {
     display: block;
-    padding: 20px 5px;
+    padding: 5px 5px;
     margin: 0;
+  }
 }
-}
-
-
 /* styling the search icon */
-header .container ul+a {
+header .container ul + a {
   display: inline-block;
   margin-left: 10px;
-  padding: 20px 15px ;
+  padding: 20px 15px;
   color: var(--w-text-color);
   position: relative;
   /* font-size: 20px; */
 }
-
-header .container ul+a:hover {
+header .container ul + a:hover {
   color: var(--blue-color);
   /* border-bottom: 3px solid var(--blue-color); */
 }
-
-header .container ul+a::before {
+header .container ul + a::before {
   content: "";
   width: 2px;
   height: 30px;
@@ -182,11 +161,10 @@ header .container ul+a::before {
   top: 15px;
   left: 0;
 }
-header .container ul+a:hover::before{
+header .container ul + a:hover::before {
   background-color: var(--blue-color);
 }
-
-header .container ul+a::after {
+header .container ul + a::after {
   content: "";
   width: 100%;
   height: var(--header-glow-height);
@@ -196,44 +174,122 @@ header .container ul+a::after {
   left: 0;
   display: none;
   z-index: 1;
-
 }
-
-header .container ul+a:hover::after {
+header .container ul + a:hover::after {
   display: block;
 }
-
-
-
 /* end header */
 
 /* start landing section  */
 .landing {
-  display: flex;
   min-height: 100vh;
-  justify-content: center;
+  display: flex;
+  justify-content: left;
   align-items: center;
-  text-align: center;
 }
 
-.landing ::before {
+.landing::before {
   content: "";
   background-image: url(../images/landing.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: ;
   position: absolute;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.66;
+  opacity: 0.60;
   z-index: -1;
 }
 
 .landing .container {
-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  position: relative;
 }
+
+.landing .container .landing-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: flex-start;
+  width: 45vw;
+  color: var(--w-text-color);
+
+}
+
+.landing .container .landing-content::after {
+  content: "";
+  background-color: #0f748f;
+  position: absolute;
+  top: 0;
+  right: -6%;
+  bottom: 0;
+  left: -25%;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.landing .container .landing-content h2 {
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 2.86vw;
+  margin:20px 0 ;
+  padding-left: 10px;
+  line-height: 1.8;
+}
+
+.landing .container .landing-content p{
+  padding-left: 10px;
+  margin:0 0 25px 0;
+  line-height: 1.8;
+  font-weight: 300;
+  font-size: 1.4vw;
+}
+
+@media (max-width: 767px) {
+  .landing .container .landing-content {
+    width: auto;
+    max-width: 90vw;
+  }
+  .landing .container .landing-content h2 {
+    font-size: 6.2vw;
+  }
+  .landing .container .landing-content p {
+    font-size: 3.3vw;
+  }
+}
+
+.landing .container .dots-content {
+  align-self: center;
+  position: absolute;
+  bottom: 25px;
+}
+
+.landing .container .dots-content .dot {
+  display: inline-block;
+  margin: 1px;
+  border: 2px solid var(--w-text-color);
+  width: 14px;
+  aspect-ratio: 1/1;
+  border-radius: 2px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+
+.landing .container .dots-content .dot:nth-child(2) {
+  background-color: var(--blue-color);
+  border-color: var(--blue-color);
+}
+
+
+
+
 
 
 
