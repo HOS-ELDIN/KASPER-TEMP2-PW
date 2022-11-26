@@ -1,5 +1,6 @@
 /* start variables */
 :root {
+  --sec-padding: 50px;
   --w-text-color: #ffffff;
   --b-body-color: #1f2021;
   --blue-color: #00c7fc;
@@ -20,6 +21,56 @@ ul {
 /* end global rules */
 
 /* start component */
+.main-heading {
+  text-align: center;
+}
+.main-heading h2 {
+  color: var(--b-body-color);
+  font-size: 40px;
+  font-weight: 400  ;
+  letter-spacing: 1px;
+  position: relative;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+}
+.main-heading h2::before{
+  content: "";
+  width: 120px;
+  height: 2px;
+  background-color: var(--b-body-color);
+  position: absolute;
+  bottom: -35px;
+  right: 50%;
+  transform: translateX(50%);
+}
+.main-heading h2::after{
+  content: "";
+  width: 16px;
+  aspect-ratio: 1/1;
+  background-color: white;
+  border: 2px solid var(--b-body-color);
+  border-radius: 50% ;
+  position: absolute;
+  bottom: -44px;
+  right: 50%;
+  transform: translateX(50%);
+  -webkit-border-radius: 50% ;
+  -moz-border-radius: 50% ;
+  -ms-border-radius: 50% ;
+  -o-border-radius: 50% ;
+  -webkit-transform: translateX(50%);
+  -moz-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  -o-transform: translateX(50%);
+}
+.main-heading p {
+  margin: 0 auto 50px auto;
+  width: 500px;
+  max-width: 100%;
+  color: #777 ;
+  line-height: 2;
+}
+
 /* end component */
 
 /* start header */
@@ -289,10 +340,147 @@ header .container ul + a:hover::after {
 }
 /* end landing section  */
 
-/* strat features */
-/* end features */
-
 /* start of services */
+section.services{
+  background-color: #ffffff;
+  padding-top: var(--sec-padding);
+  padding-bottom: var(--sec-padding);
+}
+
+.services .container .services-content {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(450px, 1fr));
+  column-gap: 40px;
+  row-gap: 60px;
+}
+
+.services .container .services-content .serv {
+  /* min-height: 200px; */
+  display: flex;
+}
+.services .container .services-content .serv i {
+  margin: 0 50px 0 0;
+  color: var(--main-color);
+  font-size: 50px;
+}
+
+@media (max-width: 767px) {
+  .services .container .services-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .services .container .services-content .serv {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .services .container .services-content .serv i {
+    margin: 30px auto;
+  }
+}
+.services .container .services-content .serv .info h3 {
+  margin: 0 0 30px 0;
+  color: var(--blue-color);
+}
+.services .container .services-content .serv .info p {
+  margin: 0;
+  color: #777;
+  line-height: 2;
+}
+
+/* <!-- START DESIGN features --> */
+
+section.design-features {
+  padding-top: calc(var(--sec-padding) + 50px );
+  padding-bottom: calc(var(--sec-padding) + 50px );
+  background-image: url(../images/design-features.jpg);
+  background-size: cover;
+  display: grid;
+  display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
+  /* grid-template-columns: repeat(2 , minmax(300px, 1fr)); */
+  gap: 50px ;
+  height: 600px;
+}
+
+.design-features .design-img {
+  width: 310px;
+  position: relative;
+  margin: 0 auto;
+}
+
+
+
+.design-features .design-img img {
+  width: 100%;
+  position: absolute;
+  bottom: -45%;
+  left: 50%;
+  transform: translatex(-50%);
+  -webkit-transform: translatex(-50%);
+  -moz-transform: translatex(-50%);
+  -ms-transform: translatex(-50%);
+  -o-transform: translatex(-50%);
+}
+
+.design-features .design-list {
+max-width: 600px;
+background-color: var(--transparent-color) ;
+flex: 1 ;
+padding: 50px;
+color: var(--w-text-color);
+}
+
+@media (max-width: 767px) {
+  .design-features .design-img {
+    display: none;
+  }
+  .design-features .design-list {
+    max-width: 100%;
+    padding: 40px;
+  }
+}
+
+.design-features .design-list p {
+  margin-bottom: 45px;
+  font-size: 21px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .design-features .design-img {
+    display: none;
+  }
+  .design-features .design-list {
+    max-width: 100%;
+    padding: 40px;
+  }
+  .design-features .design-list p {
+  font-size: 19px;
+  }
+
+}
+
+.design-features .design-list li {
+  position: relative;
+  padding: 15px 0 ;
+}
+
+.design-features .design-list li::before {
+  content: " \e163 ";
+  margin-right: 15px;
+}
+
+
+/* <!-- END DESIGN features --> */
+
+
+
+
+
+
 /* end of services */
 
 /* start of portfolio */
