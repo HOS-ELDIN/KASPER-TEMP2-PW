@@ -501,15 +501,11 @@ section.portfolio ul a {
   font-weight: 500;
 }
 
-section.portfolio ul li a:hover {
-  background-color: #00c7fc;
-  color: var(--w-text-color);
-}
-
 /* <!-- projects cards --> */
 .portfolio .portfolio-content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin-bottom: 30px;
 }
 
 .portfolio .portfolio-content .pro-card {
@@ -517,14 +513,13 @@ section.portfolio ul li a:hover {
   overflow: hidden;
 }
 
-
 .portfolio .portfolio-content .pro-card img {
   width: 100%;
-  transition: .4s;
-  -webkit-transition: .4s;
-  -moz-transition: .4s;
-  -ms-transition: .4s;
-  -o-transition: .4s;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
 }
 
 .portfolio .portfolio-content .pro-card img:hover {
@@ -535,8 +530,6 @@ section.portfolio ul li a:hover {
   -o-transform: rotate(2deg) scale(1.1);
 }
 
-
-
 .portfolio .portfolio-content .pro-card .pro-info {
   background-color: var(--w-text-color);
   width: 100%;
@@ -545,16 +538,16 @@ section.portfolio ul li a:hover {
   position: absolute;
   bottom: 0;
   left: 50%;
-  transition: .4s;
+  transition: 0.4s;
   transform: translateX(-50%) translateY(100%);
   -webkit-transform: translateX(-50%) translateY(100%);
   -moz-transform: translateX(-50%) translateY(100%);
   -ms-transform: translateX(-50%) translateY(100%);
   -o-transform: translateX(-50%) translateY(100%);
-  -webkit-transition: .4s;
-  -moz-transition: .4s;
-  -ms-transition: .4s;
-  -o-transition: .4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
 }
 
 .portfolio .portfolio-content .pro-card:hover .pro-info {
@@ -565,16 +558,28 @@ section.portfolio ul li a:hover {
   -o-transform: translateY(0) translateX(-50%);
 }
 
-
-
-
-
-
 .portfolio .portfolio-content .pro-card .pro-info p:first-of-type {
-margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 .portfolio .portfolio-content .pro-card .pro-info p:last-of-type {
   color: var(--blue-color);
+}
+
+/* more link  */
+.portfolio > a {
+  display: block;
+  width: 130px;
+  background-color: #00c5fc57;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--b-body-color);
+  margin: 0 auto;
+}
+/*hovering on links */
+section.portfolio a:hover {
+  background-color: #00c7fc;
+  color: var(--w-text-color);
 }
 
 /* end of portfolio */
