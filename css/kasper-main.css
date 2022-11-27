@@ -27,13 +27,13 @@ ul {
 .main-heading h2 {
   color: var(--b-body-color);
   font-size: 40px;
-  font-weight: 400  ;
+  font-weight: 400;
   letter-spacing: 1px;
   position: relative;
   text-transform: uppercase;
   margin-bottom: 70px;
 }
-.main-heading h2::before{
+.main-heading h2::before {
   content: "";
   width: 120px;
   height: 2px;
@@ -43,31 +43,31 @@ ul {
   right: 50%;
   transform: translateX(50%);
 }
-.main-heading h2::after{
+.main-heading h2::after {
   content: "";
   width: 16px;
   aspect-ratio: 1/1;
   background-color: white;
   border: 2px solid var(--b-body-color);
-  border-radius: 50% ;
+  border-radius: 50%;
   position: absolute;
   bottom: -44px;
   right: 50%;
   transform: translateX(50%);
-  -webkit-border-radius: 50% ;
-  -moz-border-radius: 50% ;
-  -ms-border-radius: 50% ;
-  -o-border-radius: 50% ;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
   -webkit-transform: translateX(50%);
   -moz-transform: translateX(50%);
   -ms-transform: translateX(50%);
   -o-transform: translateX(50%);
 }
 .main-heading p {
-  margin: 0 auto 50px auto;
+  margin: 0 auto 80px auto;
   width: 500px;
   max-width: 100%;
-  color: #777 ;
+  color: #777;
   line-height: 2;
 }
 
@@ -291,11 +291,11 @@ header .container ul + a:hover::after {
   font-size: 20px;
   position: absolute;
   top: 50%;
-  transform:translateY(-50%) ;
-  -webkit-transform:translateY(-50%) ;
-  -moz-transform:translateY(-50%) ;
-  -ms-transform:translateY(-50%) ;
-  -o-transform:translateY(-50%) ;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
 }
 .landing .change-background.right {
   right: 20px;
@@ -341,7 +341,7 @@ header .container ul + a:hover::after {
 /* end landing section  */
 
 /* start of services */
-section.services{
+section.services {
   background-color: #ffffff;
   padding-top: var(--sec-padding);
   padding-bottom: var(--sec-padding);
@@ -350,7 +350,7 @@ section.services{
 .services .container .services-content {
   margin-top: 60px;
   display: grid;
-  grid-template-columns: repeat(auto-fill , minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   column-gap: 40px;
   row-gap: 60px;
 }
@@ -392,15 +392,15 @@ section.services{
 
 /* <!-- START DESIGN features --> */
 section.design-features {
-  padding-top: calc(var(--sec-padding) + 50px );
-  padding-bottom: calc(var(--sec-padding) + 50px );
+  padding-top: calc(var(--sec-padding) + 50px);
+  padding-bottom: calc(var(--sec-padding) + 50px);
   height: 600px;
   background-image: url(../images/design-features.jpg);
   background-size: cover;
   display: flex;
   flex-wrap: wrap;
   /* align-items: center; */
-  gap: 50px ;
+  gap: 50px;
   overflow: hidden;
   position: relative;
 }
@@ -430,14 +430,14 @@ section.design-features::before {
   -o-transform: translatex(-50%);
 }
 .design-features .design-list {
-max-width: 600px;
-/* height: fit-content; */
-background-color: var(--transparent-color) ;
-flex: 1 ;
-padding: 50px;
-color: var(--w-text-color);
-z-index: 1;
-align-self: center;
+  max-width: 600px;
+  /* height: fit-content; */
+  background-color: var(--transparent-color);
+  flex: 1;
+  padding: 50px;
+  color: var(--w-text-color);
+  z-index: 1;
+  align-self: center;
 }
 @media (max-width: 767px) {
   .design-features .design-img {
@@ -462,16 +462,15 @@ align-self: center;
     padding: 40px;
   }
   .design-features .design-list p {
-  font-size: 19px;
+    font-size: 19px;
   }
-
 }
 .design-features .design-list li {
-  padding: 15px 0 ;
+  padding: 15px 0;
 }
 .design-features .design-list li::before {
   content: " \e163 ";
-  font-family:"Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Free";
   font-weight: 600;
   margin-right: 15px;
   position: relative;
@@ -480,7 +479,103 @@ align-self: center;
 /* <!-- END DESIGN features --> */
 
 /* start of portfolio */
+section.portfolio {
+  background-color: #ffffff;
+  padding-top: var(--sec-padding);
+  padding-bottom: var(--sec-padding);
+}
+/* <!-- selecting menu --> */
+section.portfolio ul {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 30px;
+}
 
+section.portfolio ul a {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  color: #777;
+  font-weight: 500;
+}
+
+section.portfolio ul li a:hover {
+  background-color: #00c7fc;
+  color: var(--w-text-color);
+}
+
+/* <!-- projects cards --> */
+.portfolio .portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.portfolio .portfolio-content .pro-card {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.portfolio .portfolio-content .pro-card img {
+  width: 100%;
+  transition: .4s;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+}
+
+.portfolio .portfolio-content .pro-card img:hover {
+  transform: rotate(2deg) scale(1.1);
+  -webkit-transform: rotate(2deg) scale(1.1);
+  -moz-transform: rotate(2deg) scale(1.1);
+  -ms-transform: rotate(2deg) scale(1.1);
+  -o-transform: rotate(2deg) scale(1.1);
+}
+
+
+
+.portfolio .portfolio-content .pro-card .pro-info {
+  background-color: var(--w-text-color);
+  width: 100%;
+  padding: 20px;
+  text-transform: capitalize;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transition: .4s;
+  transform: translateX(-50%) translateY(100%);
+  -webkit-transform: translateX(-50%) translateY(100%);
+  -moz-transform: translateX(-50%) translateY(100%);
+  -ms-transform: translateX(-50%) translateY(100%);
+  -o-transform: translateX(-50%) translateY(100%);
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+}
+
+.portfolio .portfolio-content .pro-card:hover .pro-info {
+  transform: translateY(0) translateX(-50%);
+  -webkit-transform: translateY(0) translateX(-50%);
+  -moz-transform: translateY(0) translateX(-50%);
+  -ms-transform: translateY(0) translateX(-50%);
+  -o-transform: translateY(0) translateX(-50%);
+}
+
+
+
+
+
+
+.portfolio .portfolio-content .pro-card .pro-info p:first-of-type {
+margin-bottom: 10px;
+}
+.portfolio .portfolio-content .pro-card .pro-info p:last-of-type {
+  color: var(--blue-color);
+}
 
 /* end of portfolio */
 
