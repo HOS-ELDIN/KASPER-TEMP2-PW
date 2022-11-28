@@ -491,7 +491,6 @@ section.portfolio ul {
   gap: 5px;
   margin-bottom: 30px;
 }
-
 section.portfolio ul a {
   text-transform: uppercase;
   text-decoration: none;
@@ -500,6 +499,17 @@ section.portfolio ul a {
   color: #777;
   font-weight: 500;
 }
+
+@media (max-width:767px) {
+  section.portfolio ul {
+    gap: 0;
+  }
+  section.portfolio ul a {
+    padding: 10px 5px;
+  }
+
+}
+
 
 /* <!-- projects cards --> */
 .portfolio .portfolio-content {
