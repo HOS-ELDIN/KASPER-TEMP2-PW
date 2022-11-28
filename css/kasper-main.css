@@ -576,20 +576,113 @@ section.portfolio a:hover {
 
 /* start of video */
 section.video {
-  /* background-color: #ffffff; */
+  background-color: #ffffff;
   padding-top: var(--sec-padding);
   padding-bottom: var(--sec-padding);
+  position: relative;
 }
+.video video {
+  width: 100%;
+}
+.video .text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%) ;
+  -moz-transform: translateY(-50%) ;
+  -ms-transform: translateY(-50%) ;
+  -o-transform: translateY(-50%) ;
+  background-color: var(--transparent-color);
+  width: 100%;
+  text-align: center;
+  color: var(--w-text-color);
+  padding: 50px 0;
+}
+.video .text h3 {
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+.video .text p {
+  margin-bottom: 30px;
+}
+.video .text a {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  background-color: var(--b-body-color);
+  padding: 10px 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--w-text-color);
+}
+@media (max-width:767px) {
+  .video .text {
+  padding: 20px 0;
+  }
+  .video .text h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
 
-
-
-
-
+  .video .text p {
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  .video .text a {
+  padding: 10px 15px;
+  font-size: 14px;
+  }
+}
 /* end of video */
 
 /* start of about */
 /* end of about */
 
+
+/* <!--  start states section  --> */
+/* <!--  end states section  --> */
+
+/* <!--  start skills section  --> */
+.test-skills .test {
+  position: relative;
+}
+
+
+.test-skills .dots-content {
+  position: absolute;
+  bottom: 30px;
+  right: 50%;
+  transform: translateX(50%);
+  -webkit-transform: translateX(50%);
+  -moz-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  -o-transform: translateX(50%);
+}
+.test-skills .dots-content .dot {
+  display: inline-block;
+  margin: 2px;
+  border: 1px solid var(--w-text-color);
+  width: 16px;
+  aspect-ratio: 1/1;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.test-skills .dots-content .dot:hover {
+  background-color: var(--blue-color);
+  border-color: var(--blue-color);
+}
+.test-skills .dots-content .dot:nth-child(2) {
+  background-color: var(--blue-color);
+  border-color: var(--blue-color);
+}
+/* <!--  end skills section  --> */
+
+/* <!--start about filaly  --> */
+/* <!-- end about filaly  --> */
 /* start of contact */
 /* end of contact */
 
