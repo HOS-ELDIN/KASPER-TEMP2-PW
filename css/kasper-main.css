@@ -2,9 +2,10 @@
 :root {
   --sec-padding: 50px;
   --w-text-color: #ffffff;
+  --dim-text-color: #a8a8a8;
   --b-body-color: #1f2021;
   --blue-color: #00c7fc;
-  --transparent-color: rgba(15, 116, 143, 0.7);
+  --transparent-color: #0f748fb3;
   --header-glow-bot-pos: -11px;
   --header-glow-height: 1px;
 }
@@ -637,33 +638,185 @@ section.video {
 /* end of video */
 
 /* start of about */
+.about {
+  padding-top: var(--sec-padding);
+  /* padding-bottom: var(--sec-padding); */
+  background-color: #fff;
+}
+/* about imag */
+.about .about-image {
+  position: relative;
+  overflow: hidden;
+aspect-ratio: 4.5/1;
+}
+.about .about-image img {
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left:50%;
+  transform: translateX(-55%);
+  -webkit-transform: translateX(-55%);
+  -moz-transform: translateX(-55%);
+  -ms-transform: translateX(-55%);
+  -o-transform: translateX(-55%);
+}
 /* end of about */
 
-
 /* <!--  start states section  --> */
+.stats {
+  background-image: url(../images/stats.png);
+  background-size: cover;
+  position: relative;
+  padding-top: var(--sec-padding);
+  padding-bottom: var(--sec-padding);
+  z-index: 0;
+}
+.stats::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 45%);
+}
+.stats .container {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.stats .container .box {
+  flex-basis: 25%;
+  padding: 30px;
+  text-align: center;
+  color: var(--w-text-color);
+  background-color: var(--transparent-color);
+}
+@media (max-width: 767px) {
+  .stats .container .box {
+    flex-basis: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .stats .container .box {
+    flex-basis: 50%;
+  }
+}
+.stats .container .box i {
+  background-color: var(--b-body-color);
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+.stats .container .box h2 {
+  font-size: 50px;
+  margin: 30px auto;
+}
+.stats .container .box p {
+  margin: 20px auto;
+  text-transform: capitalize;
+}
 /* <!--  end states section  --> */
 
 /* <!--  start skills section  --> */
-.test-skills .test {
-  position: relative;
+.test-skills {
+  padding-top: var(--sec-padding);
+  padding-bottom: var(--sec-padding);
+background-color: #fff;
+}
+
+.test-skills .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(350px, 1fr));
+  gap: 50px;
+}
+
+@media (max-width: 767px) {
+  .test-skills .container {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 
+/* test and skill heading */
+.skills-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.skills-heading h3 {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.skills-heading p {
+  line-height: 2;
+  color: #a8a8a8;
+}
+/* end heading  */
+
+/* member  */
+.test-skills .container .test .member {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.test-skills .container .test .member img {
+  width: 100px;
+  aspect-ratio: 1;
+  margin:auto 50px auto 0;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+@media (max-width: 767px) {
+  .test-skills .container .test .member {
+    flex-direction: column;
+  align-items: center;
+  text-align: center;
+  }
+  .test-skills .container .test .member img {
+  margin:auto 0 20px 0;
+  }
+}
+
+.test-skills .container .test .member .info {
+  border-bottom: 1px solid var(--dim-text-color);
+
+}
+.test-skills .container .test .member .info p:first-child {
+  line-height: 2;
+  margin-bottom: 10px;
+}
+.test-skills .container .test .member .info p:last-of-type {
+  text-align: right;
+  color: var(--dim-text-color);
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+/* dots  */
 .test-skills .dots-content {
-  position: absolute;
-  bottom: 30px;
-  right: 50%;
-  transform: translateX(50%);
-  -webkit-transform: translateX(50%);
-  -moz-transform: translateX(50%);
-  -ms-transform: translateX(50%);
-  -o-transform: translateX(50%);
+  display: flex;
+  justify-content: center;
 }
 .test-skills .dots-content .dot {
   display: inline-block;
-  margin: 2px;
-  border: 1px solid var(--w-text-color);
-  width: 16px;
+  margin: 4px;
+  border: 1px solid var(--dim-text-color);
+  width: 14px;
   aspect-ratio: 1/1;
   border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -679,6 +832,17 @@ section.video {
   background-color: var(--blue-color);
   border-color: var(--blue-color);
 }
+
+
+
+
+
+
+
+
+
+
+
 /* <!--  end skills section  --> */
 
 /* <!--start about filaly  --> */
