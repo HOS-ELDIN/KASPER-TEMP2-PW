@@ -14,7 +14,7 @@
 /* start global rules */
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: var(--b-body-color);
+  /* background-color: var(--b-body-color); */
 }
 ul {
   list-style: none;
@@ -230,8 +230,10 @@ header .container ul + a:hover::after {
 .landing {
   min-height: 100vh;
   position: relative;
+  background-color: var(--b-body-color);
+  z-index: 0;
 }
-.landing::before {
+.landing::after {
   content: "";
   background-image: url(../images/landing.jpg);
   background-size: cover;
@@ -241,7 +243,7 @@ header .container ul + a:hover::after {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.6;
+  opacity: .7;
   z-index: -1;
 }
 .landing .landing-content {
@@ -343,11 +345,10 @@ header .container ul + a:hover::after {
 
 /* start of services */
 section.services {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   padding-top: var(--sec-padding);
   padding-bottom: var(--sec-padding);
 }
-
 .services .container .services-content {
   margin-top: 60px;
   display: grid;
@@ -355,7 +356,6 @@ section.services {
   column-gap: 40px;
   row-gap: 60px;
 }
-
 .services .container .services-content .serv {
   /* min-height: 200px; */
   display: flex;
@@ -365,7 +365,6 @@ section.services {
   color: var(--main-color);
   font-size: 50px;
 }
-
 @media (max-width: 767px) {
   .services .container .services-content {
     display: flex;
@@ -481,7 +480,7 @@ section.design-features::before {
 
 /* start of portfolio */
 section.portfolio {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   padding-top: var(--sec-padding);
   padding-bottom: var(--sec-padding);
 }
@@ -577,7 +576,7 @@ section.portfolio a:hover {
 
 /* start of video */
 section.video {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   padding-top: var(--sec-padding);
   padding-bottom: var(--sec-padding);
   position: relative;
@@ -640,8 +639,7 @@ section.video {
 /* start of about */
 .about {
   padding-top: var(--sec-padding);
-  /* padding-bottom: var(--sec-padding); */
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 /* about imag */
 .about .about-image {
@@ -730,15 +728,13 @@ section.video {
 .test-skills {
   padding-top: var(--sec-padding);
   padding-bottom: var(--sec-padding);
-  background-color: #fff;
+  /* background-color: #fff; */
 }
-
 .test-skills .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 50px;
 }
-
 @media (max-width: 767px) {
   .test-skills .container {
     display: flex;
@@ -751,13 +747,11 @@ section.video {
   text-align: center;
   margin-bottom: 40px;
 }
-
 .skills-heading h3 {
   margin-bottom: 30px;
   text-transform: uppercase;
   font-weight: normal;
 }
-
 .skills-heading p {
   line-height: 2;
   color: #a8a8a8;
@@ -769,7 +763,6 @@ section.video {
   display: flex;
   margin-bottom: 30px;
 }
-
 .test-skills .container .test .member img {
   width: 100px;
   aspect-ratio: 1;
@@ -783,14 +776,12 @@ section.video {
 @media (max-width: 767px) {
   .test-skills .container .test .member {
     flex-direction: column;
-    align-items: center;
     text-align: center;
   }
   .test-skills .container .test .member img {
-    margin: auto 0 20px 0;
+    margin: auto auto 20px ;
   }
 }
-
 .test-skills .container .test .member .info {
   border-bottom: 1px solid var(--dim-text-color);
 }
@@ -832,7 +823,6 @@ section.video {
 }
 
 /* start our skills  */
-
 .skills .holder {
   margin-bottom: 30px;
 }
@@ -842,17 +832,34 @@ section.video {
   font-weight: normal;
 }
 .skills .holder .prog {
-  background-color: #777;
+  background-color: #dedadc;
   height: 20px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
 }
 .skills .holder .prog span {
   display: block;
   background-color: var(--blue-color);
   height: 100%;
   position: relative;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
 }
-
 .skills .holder .prog span::after {
+  content: "";
+  position: absolute;
+  right: -6px;
+  top: -12px;
+  border: 6px solid;
+  border-color: var(--b-body-color) transparent transparent transparent;
+}
+.skills .holder .prog span::before {
   content: attr(data-progress) ;
   color: var(--w-text-color);
   padding: 5px;
@@ -867,27 +874,10 @@ section.video {
   -ms-border-radius: 7px;
   -o-border-radius: 7px;
 }
-.skills .holder .prog span::before {
-  content: "";
-  position: absolute;
-  right: -6px;
-  top: -12px;
-  border: 6px solid;
-  border-color: var(--b-body-color) transparent transparent transparent;
-
-}
-
-
-
-
-
-
-
-
 /* <!--  end skills section  --> */
 
-/* <!--start about filaly  --> */
-.finally {
+/* <!--start about quote  --> */
+.quote {
   padding-top: calc(var(--sec-padding) + 50px);
   padding-bottom: calc(var(--sec-padding) + 10px);
   background-image: url(../images/quote.jpg);
@@ -896,7 +886,7 @@ section.video {
   color: var(--w-text-color);
   position: relative;
 }
-.finally::before {
+.quote::before {
   content: "";
   position: absolute;
   top: 0;
@@ -905,18 +895,50 @@ section.video {
   height: 100%;
   background-color: rgb(0 0 0 / 60%);
 }
-.finally .container {
+.quote .container {
   position: relative;
 }
-.finally q {
+.quote q {
   display: block;
   font-size: 30px;
   margin-bottom: 20px;
 }
-.finally p {
+.quote q::before {
+  content: "\f10d";
+  font-family:"Font Awesome 6 Free";
+  font-weight: 600;
+}
+.quote q::after {
+  content: "\f10e";
+  font-family:"Font Awesome 6 Free";
+  font-weight: 600;
+}
+.quote p {
   font-size: 16px;
 }
 /* <!-- end about filaly  --> */
+
+/* <!-- start pricing --> */
+.pricing {
+  padding-top: var(--sec-padding);
+  padding-bottom: var(--sec-padding);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* <!-- end pricing --> */
+
 /* start of contact */
 /* end of contact */
 
