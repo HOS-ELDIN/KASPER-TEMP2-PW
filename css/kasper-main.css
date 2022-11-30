@@ -14,15 +14,10 @@
 /* start global rules */
 body {
   font-family: "Open Sans", sans-serif;
-  /* background-color: var(--b-body-color); */
 }
 ul {
   list-style: none;
 }
-
-/* * {
-  outline: 1px solid red;
-} */
 /* end global rules */
 
 /* start component */
@@ -75,7 +70,6 @@ ul {
   color: #777;
   line-height: 2;
 }
-
 /* end component */
 
 /* start header */
