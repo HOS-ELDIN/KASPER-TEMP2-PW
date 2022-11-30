@@ -1055,11 +1055,97 @@ margin-bottom: 40px;
 color: var(--w-text-color);
 background-color: var(--blue-color);
 }
-
 /* <!-- end pricing --> */
 
-/* start of contact */
-/* end of contact */
+/* start of subscribe */
+.sub {
+  padding-top: var(--sec-padding);
+  padding-bottom: var(--sec-padding);
+  background-image: url(../images/subscribe.jpg);
+  background-size: cover;
+  position: relative;
+  color: var(--w-text-color);
+
+}
+.sub::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(0 0 0 / 10%);
+}
+.sub .container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 30px;
+}
+@media (max-width:991px) {
+  .sub .container {
+    flex-direction: column;
+  }
+}
+.sub .container form {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  max-width: 100%;
+  position: relative;
+}
+.sub .container form i {
+  position: absolute;
+  left: 22px;
+  /* top: 50%;
+  transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+  -moz-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  -o-transform: translateY(50%); */
+}
+.sub .container input[type="email"] {
+  border: 1px solid rgb(255, 255, 255);
+  padding: 15px 20px 15px 60px;
+  background: none;
+  border-right: none;
+  caret-color: var(--blue-color);
+  width: calc(100% - 125px);
+  color: var(--blue-color);
+}
+.sub .container form ::placeholder {
+  color: var(--w-text-color);
+}
+.sub .container form input[type="submit"] {
+  background-color: var(--blue-color);
+  border: 1px solid var(--w-text-color);
+  border-left: none;
+  padding: 15px 10px;
+  color: var(--w-text-color);
+  text-transform: uppercase;
+  width: 125px;
+}
+.sub .container >p {
+  line-height: 2;
+}
+@media (max-width:991px) {
+  .sub .container >p {
+    text-align: center;
+  }
+}
+.sub .container input[type="email"]:focus,
+.sub .container input[type="submit"]:focus{
+  outline: none;
+}
+/* end of subscribe */
+
+/* start of contact us*/
+
+
+
+
+
+/* end of contact us*/
 
 /* footer start */
 /* footer end */
