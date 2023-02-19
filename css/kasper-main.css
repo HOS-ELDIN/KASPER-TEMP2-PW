@@ -171,7 +171,7 @@ header .container ul li a {
   font-size: 14px;
 }
 /* remove the e */
-header .container ul li a.activee,
+header .container ul li a.active,
 header .container ul li a:hover {
   border-bottom: 1px solid var(--blue-color);
   color: var(--blue-color);
@@ -496,7 +496,18 @@ section.portfolio ul a {
   padding: 10px;
   color: #777;
   font-weight: 500;
+  cursor: pointer;
 }
+
+/*hovering and activating on links */
+section.portfolio a:hover,
+section.portfolio ul .active a {
+  background-color: #00c7fc;
+  color: var(--w-text-color);
+  border-radius: 10px;
+  /* font-weight: bold; */
+}
+
 @media (max-width: 767px) {
   section.portfolio ul {
     gap: 0;
@@ -565,11 +576,7 @@ section.portfolio ul a {
   color: var(--b-body-color);
   margin: 0 auto;
 }
-/*hovering on links */
-section.portfolio a:hover {
-  background-color: #00c7fc;
-  color: var(--w-text-color);
-}
+
 /* end of portfolio */
 
 /* start of video */
